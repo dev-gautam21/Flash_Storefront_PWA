@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlashStore – Offline</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #0f172a;
+        color: #f8fafc;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: radial-gradient(circle at top, #1d4ed8, #0f172a 60%);
+      }
+      main {
+        max-width: 420px;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.85);
+        border-radius: 20px;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 30px 60px rgba(15, 23, 42, 0.45);
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.75rem;
+        letter-spacing: 0.02em;
+      }
+      p {
+        margin: 1rem 0 0;
+        font-size: 0.95rem;
+        color: rgba(226, 232, 240, 0.85);
+      }
+      ul {
+        margin: 2rem 0 0;
+        padding: 0;
+        list-style: none;
+        text-align: left;
+        font-size: 0.9rem;
+        color: rgba(226, 232, 240, 0.85);
+      }
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 0.75rem;
+      }
+      li span {
+        display: inline-flex;
+        width: 0.9rem;
+        height: 0.9rem;
+        border-radius: 999px;
+        background: linear-gradient(120deg, #38bdf8, #6366f1);
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+      }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 2.25rem;
+        padding: 0.75rem 1.75rem;
+        border-radius: 999px;
+        font-weight: 600;
+        background: linear-gradient(120deg, #38bdf8, #6366f1);
+        color: #0f172a;
+        text-decoration: none;
+      }
+      .cta svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>You're currently offline</h1>
+      <p>
+        FlashStore keeps your cart, campaigns, and product details ready. We'll refresh everything as soon as we detect a connection.
+      </p>
+      <ul>
+        <li><span></span> View cached products and sale banners</li>
+        <li><span></span> Queue cart checkout — we'll sync automatically</li>
+        <li><span></span> Manage notification preferences anytime</li>
+      </ul>
+      <a class="cta" href="/">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0h6" />
+        </svg>
+        Try reconnecting
+      </a>
+    </main>
+  </body>
+</html>
+

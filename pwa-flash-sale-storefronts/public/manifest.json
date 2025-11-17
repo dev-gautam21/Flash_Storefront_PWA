@@ -1,0 +1,58 @@
+
+{
+  "short_name": "FlashStore",
+  "name": "Flash Storefront",
+  "description": "Installable PWA storefront for flash sales, push alerts, and offline-first shopping.",
+  "start_url": "/?utm_source=manifest",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0f172a",
+  "background_color": "#f9fafb",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Flash Sales",
+      "url": "/sale?source=pwa-shortcut",
+      "description": "Jump straight into active flash sales."
+    },
+    {
+      "name": "New Arrivals",
+      "url": "/new?source=pwa-shortcut",
+      "description": "See the latest products first."
+    },
+    {
+      "name": "Back in Stock",
+      "url": "/back-in-stock?source=pwa-shortcut",
+      "description": "Restocked favorites ready to ship."
+    }
+  ],
+  "categories": ["shopping", "productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "https://dummyimage.com/1080x1920/1d4ed8/ffffff.png&text=Flash+Storefront",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "https://dummyimage.com/1920x1080/0f172a/ffffff.png&text=Flash+Sale+Dashboard",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

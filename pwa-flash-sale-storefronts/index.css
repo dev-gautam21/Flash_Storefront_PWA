@@ -1,0 +1,308 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Glassmorphism and Animation Styles */
+@layer utilities {
+  /* Enhanced glassmorphism effects */
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+  }
+  
+  .backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+  }
+  
+  /* Custom animation utilities */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s infinite linear;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  /* Custom shadow effects */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .shadow-inner-glow {
+    box-shadow: inset 0 2px 4px 0 rgba(255, 255, 255, 0.06);
+  }
+  
+  /* Gradient text */
+  .text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* New warm blue gradient */
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Vibrant accent gradient */
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #1d4ed8 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Glassmorphism enhancement for better browser support */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.25);
+}
+
+/* Warm glassmorphism variant */
+.glass-card-warm {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(37, 99, 235, 0.3);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, text-decoration-color 0.2s ease, fill 0.2s ease, stroke 0.2s ease;
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 85, 85, 0.7);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: rgba(17, 24, 39, 0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(75, 85, 99, 0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(107, 114, 128, 0.7);
+  }
+}
+
+/* Manual dark mode classes */
+.dark {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(2, 8, 20, 0.6);
+}
+
+.dark .glass-card-warm {
+  background: rgba(15, 23, 42, 0.32);
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(2, 8, 20, 0.65);
+}
+
+.dark .bg-white\/80 {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+.dark .bg-white\/90 {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+}
+
+.dark .text-gray-800 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-gray-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-gray-600 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-gray-500 {
+  color: #94a3b8 !important;
+}
+
+.dark .border-white\/20 {
+  border-color: rgba(148, 163, 184, 0.2) !important;
+}
+
+.dark .border-white\/30 {
+  border-color: rgba(148, 163, 184, 0.3) !important;
+}
+
+.dark .from-white\/20 {
+  --tw-gradient-from: rgba(148, 163, 184, 0.2) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(148, 163, 184, 0)) !important;
+}
+
+.dark .to-white\/10 {
+  --tw-gradient-to: rgba(148, 163, 184, 0.1) !important;
+}
+
+.dark .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75) !important;
+}
+
+.dark .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.25) !important;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+.dark .hover\:text-blue-600:hover {
+  color: #60a5fa !important;
+}
+
+.dark .hover\:text-gray-600:hover {
+  color: #cbd5e1 !important;
+}
+
+.dark .hover\:text-gray-700:hover {
+  color: #e2e8f0 !important;
+}
+
+.dark .hover\:text-gray-500:hover {
+  color: #94a3b8 !important;
+}
+
+/* Dark mode glassmorphism background */
+.dark .from-white\/20 {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.3) 0%, rgba(15, 23, 42, 0.2) 100%);
+}
+
+.dark .to-white\/10 {
+  background: rgba(15, 23, 42, 0.1);
+}
+
+/* Enhanced dark mode animations */
+.dark .group:hover .group-hover\:bg-white\/90 {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+}
+
+.dark .group:hover .group-hover\:text-blue-600 {
+  color: #60a5fa !important;
+}
+
+.dark .group:hover .group-hover\:text-gray-600 {
+  color: #e2e8f0 !important;
+}
+
+.dark .group:hover .group-hover\:text-gray-700 {
+  color: #f1f5f9 !important;
+}
+
+.dark .group:hover .group-hover\:text-gray-500 {
+  color: #cbd5e1 !important;
+}
+
+.dark .group:hover .group-hover\:shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Dark mode button enhancements */
+.dark .bg-gradient-to-r.from-blue-500.to-blue-600 {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+}
+
+.dark .hover\:from-blue-600:hover {
+  --tw-gradient-from: #2563eb !important;
+}
+
+.dark .hover\:to-blue-700:hover {
+  --tw-gradient-to: #1d4ed8 !important;
+}
+
+/* Dark mode shimmer effect for skeleton loading */
+.dark .animate-shimmer {
+  background: linear-gradient(90deg, #1e293b 0%, #334155 50%, #1e293b 100%);
+  background-size: 1000px 100%;
+}
